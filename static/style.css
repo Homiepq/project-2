@@ -1,0 +1,10 @@
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(103, 103, 103);
+}
+.modal-content{
+    margin: auto;
+    width: fit-content;
+}
