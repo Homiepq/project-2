@@ -1,0 +1,17 @@
+<div class="commentList">
+    <h2>Comments:</h2>
+    <% if (comments[0].id == null) { %>
+        <p>No comments</p>
+    <% } else { %>
+        <ul>
+            <% comments.forEach((comment) => { %>
+                <li>
+                    <h3>
+                        Author: <%= comment.author %>
+                    </h3>
+                    <p> <%= comment.comment %> </p>
+                </li>
+            <% }) %>
+        </ul>
+    <% } %>
+</div>

@@ -1,0 +1,63 @@
+@use "./base/mixins" as *;
+@use "./base/function" as f;
+@import "./base/clearDefault.scss", "./base/color.scss", "./components/modal.scss", "./components/header.scss";
+
+body {
+   background-color: $color-flamingo-600; 
+}
+
+#add {
+   background-color: $color-french-rose-600;
+   @include set_size(100px, 100px);
+   @include set_shadow();
+   border-radius: 50%;
+   color: #fff;
+   position: fixed;
+   bottom: 3rem;
+   right: 3rem;
+   border: none;
+   outline: none;
+   font-weight: 900;
+   z-index: 1000;
+   &:hover {
+      background-color: $color-french-rose;
+   }
+}
+
+footer {
+   // position: fixed;
+   // bottom: 0;
+   width: 100%;
+   @extend %template;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 80%;
+   min-height: 80vh;
+
+   & a {
+      @include set_size(40%, 40%);
+      margin: 1rem;
+      padding: 1rem;
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+   }
+}
+
+.ad {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   & img {
+      width: 300px;
+   }
+}
+
+.post {
+   min-height: 80vh;
+}
+@debug 10 * 10

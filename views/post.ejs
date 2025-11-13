@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('head.ejs') -%>
+<body>
+    <%- include('header.ejs') -%>
+        <main class="post">
+            <h3><%= product.title %></h3>
+            <p><%= product.description %></p>
+            <div class="imgs">
+                <% product.image.forEach((image) => { %>
+                    <img src="/uploads/<%= image %>">
+                <% }) %>
+            </div>
+            <%- include('postform.ejs') %>
+            <%- include('commentlist.ejs', {comments: product.comments}) %>
+        </main>
+    <%- include('footer.ejs') -%>
+</body>
+</html>

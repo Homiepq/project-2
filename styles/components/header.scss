@@ -1,0 +1,20 @@
+%template {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background: $color-french-rose-500;
+    text-transform: uppercase;
+    height: 10vh;
+    padding: 2rem;
+}
+
+header {
+    @extend %template;
+    position: sticky;
+    top: 0;
+    & a{
+        color: #fff;
+        text-decoration: none;
+    }
+}
